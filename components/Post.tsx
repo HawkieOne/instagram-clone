@@ -15,7 +15,7 @@ import { addDoc, collection, deleteDoc, doc, onSnapshot, orderBy, query, serverT
 import { db } from '../firebase';
 import Moment from "react-moment";
 
-export default function Post( {id, username, userImg, img, caption} : any) {
+export default function Post( {id, username, userImg, img, caption, timestamp} : any) {
 
     const { data: session } = useSession();
     const [comment, setComment] = useState<any>("");
@@ -99,6 +99,7 @@ export default function Post( {id, username, userImg, img, caption} : any) {
                 <BookmarkIcon className="btn"/>
             </div>
         )}
+
         {/* Caption */}
         <p className="p-5 truncate">
             {likes.length > 0 && (
@@ -106,11 +107,11 @@ export default function Post( {id, username, userImg, img, caption} : any) {
             )}
             <span className="font-bold mr-1">{username} </span> 
             {caption}
-        </p>    
+        </p>
 
         {/* Comments */}
         {comments.length > 0 && (
-            <div className="ml-10 h-20 overflow-y-scroll scrollbar-thumb-black scrollbar-thin">
+            <div className="ml-10 max-h-20 overflow-y-scroll scrollbar-thumb-black scrollbar-thin">
                 {comments.map((comment : any) => (
                     <div key={comment.id} className="flex items-center space-x-2 mb-3">
                         <img className="h-7 rounded-full" src={comment.data().userImage} alt=""/>
@@ -125,6 +126,13 @@ export default function Post( {id, username, userImg, img, caption} : any) {
                 ))}
             </div>
         )}
+
+        {/* Timestamp */}
+        <div>
+            <Moment fromNow className="pl-5 text-xs">
+                {timestamp?.toDate()}
+            </Moment>
+        </div>
 
         {/* Input box */}
         {session && (
