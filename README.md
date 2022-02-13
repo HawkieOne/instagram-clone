@@ -15,9 +15,12 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
- <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com)  -->
+<div align="center">
+  <a href="https://hawkie.me"><img alt="Screenshot of app" src="InstagramImg.png" /></a>
+</div>
+<br/>
 
-A visual clone of Instagram web app to improve my skills in frontend development. 
+A visual clone of Instagram web app to improve my skills in frontend development. In the projects some new libraries are explored. These include Firebase for database management, Next Auth with Google authorization, Recoil for React state management, HeadlessUI for visual components and React Moment for showing relevant timestamps.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -26,8 +29,13 @@ A visual clone of Instagram web app to improve my skills in frontend development
 ### Built With
 
 * [Next.js](https://nextjs.org/)
-* [React.js](https://reactjs.org/)
 * [Tailwind](https://tailwindcss.com/)
+* [Next Auth](https://next-auth.js.org/)
+* [Firebase](https://firebase.google.com/)
+* [Typescript](https://www.typescriptlang.org/)
+* [Recoil](https://recoiljs.org/)
+* [React Moment](https://www.npmjs.com/package/react-moment)
+* [HeadlessUI](https://headlessui.dev/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -46,11 +54,23 @@ Below is an example of how you can install and set up your app.
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/HawkieOne/instagram-clone
+   git clone https://github.com/HawkieOne/spotify-clone
    ```
 2. Install NPM packages
    ```sh
    npm install
+   ```
+3. Create a new file called `.env.local`
+4. Go to https://console.firebase.google.com and get a `CLIENT` and `CLIENT_SECRET` key for your app
+5. Place your keys in the `.env.local` file like below
+   ```sh
+   GOOGLE_CLIENT_ID=YOUR_CLIENT_ID
+   GOOGLE_CLIENT_SECRET=YOUR_CLIENT_SECRET
+   NEXTAUTH_URL=http://localhost:3000
+   ```
+2. Run your application
+   ```sh
+   npm run dev
    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
