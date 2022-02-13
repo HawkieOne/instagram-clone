@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Feed from '../components/Feed'
 import Header from "../components/Header"
+import Modal from '../components/Modal'
 // import { Camera } from '@heroicons/react/outline';
 
 export default function Home() {
@@ -13,10 +14,10 @@ export default function Home() {
       
       <Header />
 
-      {/* Feed */}
       <Feed />
 
-      {/* Modal */}
+      <Modal />
+      
     </div>
   )
 }
