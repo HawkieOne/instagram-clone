@@ -16,7 +16,7 @@
 ## About The Project
 
 <div align="center">
-  <a href="https://hawkie.me"><img alt="Screenshot of app" src="InstagramImg.png" /></a>
+  <img alt="Screenshot of app" src="InstagramImg.png" />
 </div>
 <br/>
 
@@ -54,7 +54,7 @@ Below is an example of how you can install and set up your app.
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/HawkieOne/spotify-clone
+   git clone https://github.com/HawkieOne/instagram-clone
    ```
 2. Install NPM packages
    ```sh
