@@ -16,7 +16,7 @@
 ## About The Project
 
 <div align="center">
-  <img alt="Screenshot of app" src="InstagramImg.png" />
+  <img alt="Screenshot of app" src="instagramImg.png" />
 </div>
 <br/>
 
